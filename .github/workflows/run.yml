@@ -7,7 +7,7 @@ on:
 
 jobs:
   run:
-    runs-on: self-hosted
+    runs-on: github
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
