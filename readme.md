@@ -1,4 +1,4 @@
-# 如何每次自动变更 出发 actions
+Last active: <!--LAST_ACTIVE-->2026-04-07<!--END_LAST_ACTIVE-->
 # Checkin
 待处理事项
 1. 未输出日志，不知道是否成功
