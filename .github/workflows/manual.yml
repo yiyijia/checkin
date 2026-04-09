@@ -19,7 +19,7 @@ jobs:
         run: |
           DATE=$(date +'%Y-%m-%d')
 
-          sed -i "s/<!--LAST_ACTIVE-->.*<!--END_LAST_ACTIVE-->/<!--LAST_ACTIVE-->$DATE<!--END_LAST_ACTIVE-->/" README.md
+          sed -i "s/<!--LAST_ACTIVE-->.*<!--END_LAST_ACTIVE-->/<!--LAST_ACTIVE-->$DATE<!--END_LAST_ACTIVE-->/" readme.md
 
       - name: Commit changes
         run: |
