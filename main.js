@@ -12,10 +12,10 @@ const glados = async () => {
       const action = await fetch('https://railgun.info/api/user/checkin', {
         method: 'POST',
         headers: { ...common, 'content-type': 'application/json' },
-        body: '{"token":"glados.cloud"}',
+        body: '{"token":"railgun.info"}',
       }).then((r) => r.json())
       if (action?.code) throw new Error(action?.message)
-      const status = await fetch('https://glados.cloud/api/user/status', {
+      const status = await fetch('https://railgun.info/api/user/status', {
         method: 'GET',
         headers: { ...common },
       }).then((r) => r.json())
