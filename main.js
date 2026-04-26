@@ -1,21 +1,25 @@
 const glados = async () => {
   const notice = []
   if (!process.env.GLADOS) return
-  for (const cookie of String(process.env.GLADOS).split('\n')) {
+  const cookies =  String(process.env.GLADOS).split('\n')
+  for (let i = 0 ;i<cookies.length;i++) {
+    const cookie = cookies[i]
     if (!cookie) continue
     try {
+      const DOMAIN =  i == 2 ? 'glados.cloud': 'railgun.info';
+      const HOST = 'https://'+DOMAIN ;
       const common = {
         'cookie': cookie,
-        'referer': 'https://railgun.info/console/checkin',
+        'referer': HOST+'/console/checkin',
         'user-agent': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)',
       }
-      const action = await fetch('https://railgun.info/api/user/checkin', {
+      const action = await fetch(HOST+'/api/user/checkin', {
         method: 'POST',
         headers: { ...common, 'content-type': 'application/json' },
-        body: '{"token":"railgun.info"}',
+        body: '{"token":DOMAIN}',
       }).then((r) => r.json())
       if (action?.code) throw new Error(action?.message)
-      const status = await fetch('https://railgun.info/api/user/status', {
+      const status = await fetch(HOST+'/api/user/status', {
         method: 'GET',
         headers: { ...common },
       }).then((r) => r.json())
