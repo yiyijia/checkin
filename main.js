@@ -6,10 +6,10 @@ const glados = async () => {
     try {
       const common = {
         'cookie': cookie,
-        'referer': 'https://glados.cloud/console/checkin',
+        'referer': 'https://railgun.info/console/checkin',
         'user-agent': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)',
       }
-      const action = await fetch('https://glados.cloud/api/user/checkin', {
+      const action = await fetch('https://railgun.info/api/user/checkin', {
         method: 'POST',
         headers: { ...common, 'content-type': 'application/json' },
         body: '{"token":"glados.cloud"}',
