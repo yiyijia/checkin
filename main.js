@@ -6,8 +6,8 @@ const glados = async () => {
     const cookie = cookies[i]
     if (!cookie) continue
     try {
-      const DOMAIN =  i == 2 ? 'glados.cloud': 'railgun.info';
-      const HOST = 'https://'+DOMAIN ;
+      const DOMAIN =  i == 2 ? "glados.cloud" : "railgun.info"
+      const HOST = 'https://'+DOMAIN
       const common = {
         'cookie': cookie,
         'referer': HOST+'/console/checkin',
