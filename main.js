@@ -16,7 +16,7 @@ const glados = async () => {
       const action = await fetch(HOST+'/api/user/checkin', {
         method: 'POST',
         headers: { ...common, 'content-type': 'application/json' },
-        body: '{"token":DOMAIN}',
+        body: `{"token": "${DOMAIN}"}`,
       }).then((r) => r.json())
       if (action?.code) throw new Error(action?.message)
       const status = await fetch(HOST+'/api/user/status', {
