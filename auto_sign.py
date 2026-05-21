@@ -22,7 +22,7 @@ session.headers.update({
 print("📡 正在访问签到页面...")
 response = session.get(url)
 html = response.text
-
+print(html)
 # 提取 nonce
 match = re.search(r'"ajax_nonce"\s*:\s*"([a-f0-9]+)"', html)
 if match:
