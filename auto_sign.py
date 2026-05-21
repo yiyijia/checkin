@@ -6,10 +6,10 @@ import sys
 url = "https://www.520switch.com/user/coin/"
 
 # 从环境变量获取 Cookie（GitHub Actions 环境）
-cookie = os.environ.get('SIGNIN_COOKIE')
+cookie = os.environ.get('COOKIE_520')
 if not cookie:
-    print("❌ 错误: 未找到 SIGNIN_COOKIE 环境变量")
-    print("请在 GitHub Secrets 中配置 SIGNIN_COOKIE")
+    print("❌ 错误: 未找到 COOKIE_520 环境变量")
+    print("请在 GitHub Secrets 中配置 COOKIE_520")
     sys.exit(1)
 
 # 先获取页面（需要登录态）
